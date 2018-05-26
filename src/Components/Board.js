@@ -121,6 +121,7 @@ class Board extends Component {
           cells={row}
           key={index}
           open={this.open}
+          finished={this.state.finished}
           count={this.state.diamondCount}
         />
       );

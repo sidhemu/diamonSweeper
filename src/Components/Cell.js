@@ -18,7 +18,10 @@ const Cell = props => {
       }
     } else {
       return (
-        <div className="cell" onClick={() => props.open(props.data)}>
+        <div
+          className="cell"
+          onClick={!props.finished ? () => props.open(props.data) : null}
+        >
           <div> ? </div>
         </div>
       );
