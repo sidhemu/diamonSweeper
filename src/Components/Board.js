@@ -8,7 +8,8 @@ class Board extends Component {
     this.state = {
       rows: this.createBoard(props),
       diamondCount: 0,
-      score: 0
+      score: 0,
+      finished: false
     };
   }
 
@@ -67,7 +68,7 @@ class Board extends Component {
               }
             }
           }
-          this.setState({ score: unOpenedCount });
+          this.setState({ score: unOpenedCount, finished: true });
         }
       });
     } else {
@@ -128,6 +129,7 @@ class Board extends Component {
       <div className="board">
         <div>{rows}</div>
         <div>Score: {this.state.score}</div>
+        {this.state.finished ? <div>Game Finished</div> : null}
       </div>
     );
   }
