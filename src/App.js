@@ -9,7 +9,6 @@ class App extends Component {
     rows: 8,
     columns: 8,
     diamonds: 8,
-    status: "running",
     openCells: 0
   };
 
